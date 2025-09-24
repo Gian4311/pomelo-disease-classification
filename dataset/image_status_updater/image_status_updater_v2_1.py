@@ -124,16 +124,16 @@ class PomeloStatusUpdater:
 
 
 def main():
-    csv_path = r"tracker\tracker.csv"
+    csv_path = r"dataset\tracker\tracker.csv"
     class_folders = {
-        "Extracted": r"images\extracted",
-        "Incorrect": r"images\incorrect",
-        "Partial": r"images\partial",
-        "Processed": r"images\processed",
-        "Unusable": r"images\unusable"
+        "Extracted": r"dataset\pomelo_images\extracted",
+        "Incorrect": r"dataset\pomelo_images\incorrect",
+        "Partial": r"dataset\pomelo_images\partial",
+        "Processed": r"dataset\pomelo_images\processed",
+        "Unusable": r"dataset\pomelo_images\unusable"
     }
-    backups_path = r"tracker\backups"
-    excel_path = r"tracker\stats.xlsx"
+    backups_path = r"dataset\tracker\backups"
+    excel_path = r"dataset\tracker\stats.xlsx"
 
     updater = PomeloStatusUpdater(csv_path, class_folders, backups_path, excel_path)
     updater.run()

@@ -1,0 +1,7 @@
+﻿Status,Description,Folder Path,Included in Extraction,Included in Status Updates
+Unprocessed,No action(s) have been done on image.,dataset\pomelo_images\raw,TRUE,FALSE
+Incorrect,May need mask or center point override.,dataset\pomelo_images\incorrect,TRUE,TRUE
+Extracted,Initial extraction of pomelo.,dataset\pomelo_images\extracted,FALSE,TRUE
+Partial,Has elements that need to be manually removed.,dataset\pomelo_images\partial,FALSE,TRUE
+Processed,Ready for machine learning model.,dataset\pomelo_images\processed,FALSE,TRUE
+Unusable,Is either a worse duplicate of another image or has more than 1 disease. ,dataset\pomelo_images\unusable,FALSE,TRUE

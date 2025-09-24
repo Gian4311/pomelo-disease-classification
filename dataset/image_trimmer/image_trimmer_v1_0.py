@@ -65,8 +65,8 @@ class ImageTrimmer:
 
 
 def main():
-    input_folder = r"images\to_trim"
-    output_folder = r"images\trimmed"
+    input_folder = r"dataset\pomelo_images\to_trim"
+    output_folder = r"dataset\pomelo_images\trimmed"
 
     trimmer = ImageTrimmer(input_folder, output_folder, alpha_threshold=10, min_area_ratio=0.05)
     trimmer.process_folder()

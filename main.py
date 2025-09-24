@@ -3,10 +3,10 @@ from image_trimmer.image_trimmer_v1_0 import main as trim_images
 from pomelo_extractor.pomelo_extractor_v2_14 import run_pomelo_extractor
 
 def load_pomelo_extractor():
-    input_folder = r"images\raw"
-    output_folder = r"images\extracted"
+    input_folder = r"dataset\pomelo_images\raw"
+    output_folder = r"dataset\pomelo_images\extracted"
     max_images = 60
-    csv_path = r"tracker\tracker.csv"
+    csv_path = r"dataset\tracker\tracker.csv"
     ignore_subfolders = []
     run_pomelo_extractor(input_folder, output_folder, max_images, csv_path, ignore_subfolders)
 

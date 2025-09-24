@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "frontend",
-    "slug": "frontend",
+    "name": "pomelo-disease-classification-app",
+    "slug": "pomelo-disease-classification-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/app-logo.png",

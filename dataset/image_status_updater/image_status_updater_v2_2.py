@@ -26,7 +26,7 @@ class PomeloStatusUpdater:
 
     def load_status_folders_from_config(self):
         status_folders = {}
-        with open("configs\\image_statuses.csv", 'r', newline='') as config_file:
+        with open("dataset\\configs\\image_statuses.csv", 'r', newline='') as config_file:
             reader = csv.reader(config_file)
             next(reader)
             for row in reader:
@@ -159,12 +159,12 @@ def run_pomelo_status_updater(csv_path, backups_path, excel_path):
 
 def main():
     parser = argparse.ArgumentParser(description='Update image statuses in CSV based on folder organization')
-    parser.add_argument('--csv_path', default=r"tracker\tracker.csv", 
-                       help='Path to the main CSV file (default: tracker\\tracker.csv)')
-    parser.add_argument('--backups_path', default=r"tracker\backups", 
-                       help='Path to backup directory (default: tracker\\backups)')
-    parser.add_argument('--excel_path', default=r"tracker\stats.xlsx", 
-                       help='Path to Excel output file (default: tracker\\stats.xlsx)')
+    parser.add_argument('--csv_path', default=r"dataset\tracker\tracker.csv", 
+                       help='Path to the main CSV file (default: dataset\\dataset\tracker\\tracker.csv)')
+    parser.add_argument('--backups_path', default=r"dataset\tracker\backups", 
+                       help='Path to backup directory (default: dataset\\dataset\tracker\\backups)')
+    parser.add_argument('--excel_path', default=r"dataset\tracker\stats.xlsx", 
+                       help='Path to Excel output file (default: dataset\\dataset\tracker\\stats.xlsx)')
     args = parser.parse_args()
     run_pomelo_status_updater(args.csv_path, args.backups_path, args.excel_path)
 
