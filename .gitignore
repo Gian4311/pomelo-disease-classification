@@ -46,6 +46,7 @@ pomelo_images
 remembrances
 
 #others
+backup_files/
 .idea/
 snippet.txt
 ~$*.xlsx
