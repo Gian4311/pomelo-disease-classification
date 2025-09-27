@@ -2,13 +2,27 @@
 
 # dependencies
 node_modules/
+**/node_modules/
 *.pth
 
-# Expo
+# Expo native build output
+android/
+ios/
+
+# Metro + Expo cache
 .expo/
+.expo-shared/
+.expo/web-cache/
+.expo/web/
+.expo/packager-info.json
+.expo/devices.json
+expo-env.d.ts
+
+# Build outputs
 dist/
 web-build/
-expo-env.d.ts
+*.apk
+*.aab
 
 # Native
 .kotlin/
@@ -32,6 +46,7 @@ yarn-error.*
 *.pem
 
 # config files
+.env
 .env*.local
 users.csv
 
@@ -45,8 +60,10 @@ __pycache__
 pomelo_images
 remembrances
 
-#others
-backup_files/
+# others
 .idea/
-snippet.txt
 ~$*.xlsx
+
+# dev
+backup_files/
+snippet.txt

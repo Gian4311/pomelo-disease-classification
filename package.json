@@ -1,33 +1,21 @@
 {
-  "name": "pomelo-disease-classification-app",
+  "name": "pomelo-disease-classification-package",
   "version": "1.0.0",
-  "main": "app/index.js",
   "scripts": {
-    "start": "expo start",
+    "dataset:start": "python dataset/main.py",
+    "frontend:install": "cd app/frontend && npm install",
+    "frontend:start": "npx cross-env EXPO_USE_PROJECT_ROOT=%FRONTEND_SYMLINK% npx expo start -c",
+    "frontend:android:build": "npx cross-env EXPO_USE_PROJECT_ROOT=%FRONTEND_SYMLINK% npx expo run:android",
+    "frontend:ios:build": "npx cross-env EXPO_USE_PROJECT_ROOT=%FRONTEND_SYMLINK% npx expo run:ios",
+    "frontend:web": "npx cross-env EXPO_USE_PROJECT_ROOT=%FRONTEND_SYMLINK% npx expo start --web",
     "android": "expo run:android",
-    "ios": "expo run:ios",
-    "web": "expo start --web"
+    "ios": "expo run:ios"
   },
   "dependencies": {
-    "@react-native-vector-icons/material-icons": "^12.3.0",
-    "@react-navigation/bottom-tabs": "^7.4.7",
-    "@react-navigation/native": "^7.1.17",
-    "@react-navigation/native-stack": "^7.3.25",
-    "axios": "^1.11.0",
-    "expo": "~53.0.20",
-    "expo-camera": "~16.1.11",
-    "expo-status-bar": "~2.2.3",
+    "expo": "~53.0.22",
     "react": "19.0.0",
-    "react-native": "0.79.5",
-    "react-native-image-picker": "^8.2.1",
-    "react-native-paper": "^5.14.5",
-    "react-native-safe-area-context": "5.4.0",
-    "react-native-screens": "~4.11.1",
-    "@expo/vector-icons": "^14.1.0",
-    "expo-image-picker": "~16.1.4"
+    "react-native": "0.79.6"
   },
-  "devDependencies": {
-    "@babel/core": "^7.20.0"
-  },
+  "devDependencies": {},
   "private": true
 }
